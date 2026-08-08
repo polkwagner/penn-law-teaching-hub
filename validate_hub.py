@@ -8,8 +8,10 @@ HTML = pathlib.Path(__file__).parent / "index.html"
 
 REQUIRED_STRINGS = [
     "https://pedagogy.pennlawteaching.org",
-    "https://pennai.law",
+    "https://resources.pennai.law/",
+    "https://pennai.law/toolkit/",
     "assets/penn-shield.png",
+    "Academic Affairs &amp; Innovation",
     "EB+Garamond",
     "DM+Sans",
     "--navy: #011F5B",

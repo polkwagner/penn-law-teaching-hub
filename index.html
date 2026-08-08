@@ -42,19 +42,42 @@
     padding: 0 clamp(1.5rem, 4vw, 3rem);
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
     height: 56px;
   }
   .site-header .wordmark {
     font-family: 'EB Garamond', serif;
     font-size: 16px;
     font-weight: 500;
+    letter-spacing: 0.01em;
     color: rgba(255,255,255,0.92);
     text-decoration: none;
     display: inline-flex;
     align-items: center;
     gap: 0.6rem;
+    min-width: 0;
+    white-space: nowrap;
   }
-  .site-header img { height: 24px; width: auto; }
+  .site-header .wordmark-divider {
+    color: rgba(255,255,255,0.5);
+  }
+  .site-shield {
+    width: 32px;
+    height: 32px;
+    flex: 0 0 32px;
+  }
+  .header-badge {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.55);
+    white-space: nowrap;
+  }
+  @media (max-width: 500px) {
+    .wordmark-divider, .wordmark-resource, .header-badge { display: none; }
+  }
   main { max-width: 960px; margin: 0 auto; padding: clamp(2rem, 5vw, 3.5rem) clamp(1.5rem, 4vw, 3rem); }
   h1 {
     font-family: 'EB Garamond', serif;
@@ -95,16 +118,6 @@
     text-decoration: none;
   }
   .card a.go:hover { text-decoration: underline; }
-  .tag {
-    align-self: flex-start;
-    font-size: 0.72rem;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    color: var(--gold);
-    background: #F5EFD0;
-    border-radius: 3px;
-    padding: 0.15rem 0.45rem;
-  }
   footer {
     border-top: 1px solid var(--border);
     margin-top: 3rem;
@@ -122,9 +135,12 @@
 <body>
 <header class="site-header">
   <a class="wordmark" href="/">
-    <img src="assets/penn-shield.png" alt="">
-    Penn Carey Law · Teaching
+    <img class="site-shield" src="assets/penn-shield.png" alt="Penn Carey Law shield">
+    <span class="wordmark-name">Penn Carey Law</span>
+    <span class="wordmark-divider" aria-hidden="true">|</span>
+    <span class="wordmark-resource">Teaching &amp; Curriculum</span>
   </a>
+  <div class="header-badge">Academic Affairs &amp; Innovation</div>
 </header>
 <main>
   <h1>Teaching and Curriculum at Penn Carey Law</h1>
@@ -141,25 +157,24 @@
     </div>
 
     <div class="card">
-      <span class="tag">In progress</span>
-      <h2>Experiential Curriculum Review</h2>
-      <p>The ongoing review of our experiential offerings — clinics,
-      externships, and practice-based courses.</p>
-      <a class="go" href="mailto:pwagner@law.upenn.edu">Email me about it →</a>
+      <h2>AI Resources</h2>
+      <p>Which AI tools you can use, what they're licensed for, and what data
+      you can put in them. Canonical for all of it.</p>
+      <a class="go" href="https://resources.pennai.law/" target="_blank" rel="noopener">Open the portal →</a>
     </div>
 
     <div class="card">
-      <h2>AI Law Project</h2>
-      <p>Tool access, data-handling guidance, and the teaching toolkit. The
-      canonical source for anything AI-related.</p>
-      <a class="go" href="https://pennai.law" target="_blank" rel="noopener">Visit pennai.law →</a>
+      <h2>AI Project Toolkit</h2>
+      <p>Syllabus language, assignment designs, policy templates, and teaching
+      demos you can adapt for your own course.</p>
+      <a class="go" href="https://pennai.law/toolkit/" target="_blank" rel="noopener">Open the toolkit →</a>
     </div>
   </div>
 </main>
 <footer>
   Maintained by Polk Wagner, Deputy Dean for Academic Affairs and Innovation ·
   <a href="mailto:pwagner@law.upenn.edu">pwagner@law.upenn.edu</a><br>
-  Last updated August 7, 2026
+  Last updated August 8, 2026
 </footer>
 </body>
 </html>
