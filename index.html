@@ -118,21 +118,57 @@
     text-decoration: none;
   }
   .card a.go:hover { text-decoration: underline; }
-  footer {
-    border-top: 1px solid var(--border);
+  /* ── FOOTER (matches the pedagogy portal) ── */
+  .site-footer {
+    background: var(--dark-gray);
+    color: rgba(255,255,255,0.75);
+    text-align: center;
+    font-size: 12px;
+    padding: 1.5rem;
+    letter-spacing: 0.03em;
     margin-top: 3rem;
-    padding: 1.5rem clamp(1.5rem, 4vw, 3rem);
-    font-size: 0.86rem;
-    color: var(--mid-gray);
-    max-width: 960px;
-    margin-left: auto;
-    margin-right: auto;
   }
-  footer a { color: var(--red); }
+  .site-footer strong { color: rgba(255,255,255,0.75); font-weight: 500; }
+  .site-footer a { color: rgba(255,255,255,0.7); text-decoration: underline; }
+
   @media (max-width: 720px) { .grid { grid-template-columns: 1fr; } }
+
+  /* ── ACCESSIBILITY (WCAG 2.2 AA — Penn standard) ── */
+  .skip-link {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    background: var(--navy);
+    color: white;
+    padding: 10px 18px;
+    z-index: 999;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    border-radius: 0 0 6px 0;
+  }
+  .skip-link:focus {
+    top: 0;
+  }
+  :focus-visible {
+    outline: 2px solid #B8960C;
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
 </style>
 </head>
 <body>
+
+<a class="skip-link" href="#main">Skip to main content</a>
+
 <header class="site-header">
   <a class="wordmark" href="/">
     <img class="site-shield" src="assets/penn-shield.png" alt="Penn Carey Law shield">
@@ -142,11 +178,12 @@
   </a>
   <div class="header-badge">Academic Affairs &amp; Innovation</div>
 </header>
-<main>
+<main id="main" tabindex="-1">
   <h1>Teaching and Curriculum at Penn Carey Law</h1>
   <p class="lede">Resources I maintain for faculty on teaching, assessment, and
-  the academic program. If something you need isn't here, email me and I'll
-  either point you to it or write it.</p>
+  the academic program. If something you need isn't here,
+  <a href="mailto:pwagner@law.upenn.edu">email me</a> and I'll either point you
+  to it or write it.</p>
 
   <div class="grid">
     <div class="card">
@@ -171,10 +208,8 @@
     </div>
   </div>
 </main>
-<footer>
-  Maintained by Polk Wagner, Deputy Dean for Academic Affairs and Innovation ·
-  <a href="mailto:pwagner@law.upenn.edu">pwagner@law.upenn.edu</a><br>
-  Last updated August 8, 2026
+<footer class="site-footer">
+  &copy; 2026 The Trustees of the University of Pennsylvania &middot; Licensed under <a href="license.html">CC BY 4.0</a> &middot; Maintained by <strong>R. Polk Wagner</strong> &middot; Last updated August 8, 2026 &middot; <a href="https://accessibility.web-resources.upenn.edu/get-help" target="_blank" rel="noopener">Report an accessibility issue</a>
 </footer>
 </body>
 </html>

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>License — Penn Law Teaching</title>
+<link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+<link rel="canonical" href="https://pennlawteaching.org/license.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #011F5B;
+    --navy-mid: #0a2f78;
+    --red: #990000;
+    --cream: #FAF8F3;
+    --warm-gray: #F2EFE8;
+    --mid-gray: #6B6863;
+    --dark-gray: #3A3630;
+    --border: #D8D4CC;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--dark-gray);
+    font-size: 15px;
+    line-height: 1.65;
+  }
+
+  /* ── HEADER (matches index.html) ── */
+  .site-header {
+    background: var(--navy);
+    color: white;
+    padding: 0 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    height: 56px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .site-header .wordmark {
+    font-family: 'EB Garamond', serif;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    color: rgba(255,255,255,0.92);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    min-width: 0;
+    white-space: nowrap;
+  }
+  .site-header .wordmark-divider {
+    color: rgba(255,255,255,0.5);
+  }
+  .site-shield {
+    width: 32px;
+    height: 32px;
+    flex: 0 0 32px;
+  }
+  .header-badge {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.55);
+    white-space: nowrap;
+  }
+  @media (max-width: 500px) {
+    .wordmark-divider, .wordmark-resource, .header-badge { display: none; }
+  }
+
+  /* ── PAGE BODY ── */
+  .page-body {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 4.5rem 3rem 5rem;
+  }
+  .breadcrumb {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 0.6rem;
+  }
+  .breadcrumb a { color: inherit; text-decoration: none; }
+  .breadcrumb a:hover { text-decoration: underline; }
+  h1 {
+    font-family: 'EB Garamond', serif;
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: var(--navy);
+    line-height: 1.15;
+    margin-bottom: 0.6rem;
+    letter-spacing: -0.01em;
+  }
+  .lead {
+    font-size: 17px;
+    font-weight: 300;
+    color: var(--mid-gray);
+    line-height: 1.7;
+    margin-bottom: 3rem;
+  }
+  h2 {
+    font-family: 'EB Garamond', serif;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--navy);
+    line-height: 1.3;
+    margin-top: 2.5rem;
+    margin-bottom: 0.6rem;
+  }
+  p {
+    font-size: 15px;
+    color: var(--dark-gray);
+    line-height: 1.75;
+    margin-bottom: 1rem;
+  }
+  p strong, p a strong { color: var(--navy); font-weight: 600; }
+  a {
+    color: var(--navy);
+    text-decoration: underline;
+  }
+  blockquote {
+    background: var(--warm-gray);
+    border-left: 3px solid var(--navy);
+    padding: 1rem 1.25rem;
+    margin: 1.5rem 0;
+    font-family: 'EB Garamond', serif;
+    font-style: italic;
+    font-size: 16px;
+    color: var(--dark-gray);
+    border-radius: 4px;
+  }
+  .back-link {
+    display: inline-block;
+    margin-top: 3rem;
+    font-size: 13.5px;
+    font-weight: 500;
+    color: var(--navy);
+    text-decoration: none;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 1px;
+  }
+  .back-link:hover { border-bottom-color: var(--navy); }
+
+  /* ── FOOTER ── */
+  .site-footer {
+    background: var(--dark-gray);
+    color: rgba(255,255,255,0.75);
+    text-align: center;
+    font-size: 12px;
+    padding: 1.5rem;
+    letter-spacing: 0.03em;
+  }
+  .site-footer strong { color: rgba(255,255,255,0.75); font-weight: 500; }
+  .site-footer a { color: rgba(255,255,255,0.7); text-decoration: underline; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 720px) {
+    .site-header { padding: 0 1.5rem; }
+    .page-body { padding: 3rem 1.5rem 4rem; }
+    h1 { font-size: 2rem; }
+  }
+
+  /* ── ACCESSIBILITY (WCAG 2.2 AA — Penn standard) ── */
+  .skip-link {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    background: var(--navy);
+    color: white;
+    padding: 10px 18px;
+    z-index: 999;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    border-radius: 0 0 6px 0;
+  }
+  .skip-link:focus {
+    top: 0;
+  }
+  :focus-visible {
+    outline: 2px solid #B8960C;
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+</style>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<!-- SITE HEADER -->
+<header class="site-header">
+  <a class="wordmark" href="index.html">
+    <img class="site-shield" src="assets/penn-shield.png" alt="Penn Carey Law shield">
+    <span class="wordmark-name">Penn Carey Law</span>
+    <span class="wordmark-divider" aria-hidden="true">|</span>
+    <span class="wordmark-resource">Teaching &amp; Curriculum</span>
+  </a>
+  <div class="header-badge">Academic Affairs &amp; Innovation</div>
+</header>
+
+<!-- LICENSE BODY -->
+<main class="page-body" id="main" tabindex="-1">
+
+  <p class="breadcrumb"><a href="index.html">&larr; Penn Law Teaching</a></p>
+
+  <h1>License</h1>
+  <p class="lead">How this site's content and code are licensed.</p>
+
+  <h2>Website content</h2>
+  <p>The text and design of this website are licensed under the <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International License</strong></a> (CC BY 4.0). You can copy, share, and adapt the content with attribution.</p>
+
+  <h2>Code</h2>
+  <p>The HTML, CSS, and JavaScript that power this site are licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0" target="_blank" rel="noopener"><strong>Apache License, Version 2.0</strong></a>. Use, modify, and redistribute as the license permits.</p>
+
+  <h2>Logos and brand assets</h2>
+  <p>Penn Carey Law institutional marks are property of the University of Pennsylvania and are used under their visual identity guidelines.</p>
+  <p>Third-party logos and tool names referenced on this site are trademarks of their respective owners and are used in a nominative fair-use capacity to identify the tools and services described. Use does not imply affiliation, sponsorship, or endorsement.</p>
+
+  <h2>Linked sites</h2>
+  <p>This hub links to the Faculty Pedagogy Resources portal, the AI Resources portal, and the AI Project Toolkit. Each of those sites carries its own license terms — check the license page on the site you are reproducing from, not this one.</p>
+
+  <h2>Attribution example</h2>
+  <blockquote>Source: Penn Law Teaching, pennlawteaching.org, CC BY 4.0</blockquote>
+
+  <a class="back-link" href="index.html">&larr; Back to Penn Law Teaching</a>
+
+</main>
+
+<!-- SITE FOOTER -->
+<footer class="site-footer">
+  &copy; 2026 The Trustees of the University of Pennsylvania &middot; Licensed under <a href="license.html">CC BY 4.0</a> &middot; Maintained by <strong>R. Polk Wagner</strong> &middot; <a href="https://accessibility.web-resources.upenn.edu/get-help" target="_blank" rel="noopener">Report an accessibility issue</a>
+</footer>
+
+</body>
+</html>
