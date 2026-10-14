@@ -12,6 +12,7 @@ INDEX_REQUIRED = [
     "https://pedagogy.pennlawteaching.org",
     "https://resources.pennai.law/",
     "https://pennai.law/toolkit/",
+    "https://evaluations.pennlawteaching.org",
     "assets/penn-shield.png",
     "Academic Affairs &amp; Innovation",
     "EB+Garamond",
